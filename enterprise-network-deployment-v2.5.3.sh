@@ -1,6 +1,10 @@
 #!/bin/bash
 
-set -o pipefail
+#set -o pipefail
+# Enable pipefail only if running in bash
+if [ -n "$BASH_VERSION" ]; then
+    set -o pipefail
+fi
 
 SCRIPT_VERSION="2.5.3"
 TEST_MODE=false
